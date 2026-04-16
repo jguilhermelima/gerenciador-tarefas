@@ -1,0 +1,39 @@
+{% include "header.html" %}
+<body
+     style="background-image: url('../static/assets/img/background.jpg')"
+
+>
+<div class="p-2 my-2 text-center">
+    <a href="{{ url_for('new_todo') }}" class="btn btn-primary " tabindex="-1" role="button" >Criar Nova Tarefa</a>
+</div>
+<div class="px-4 py-3 my-5 text-center">
+    {% for tarefa in tarefas %}
+    <h1 class="display-5 fw-bold text-body-emphasis">{{ tarefa.titulo }}</h1>
+    <div class="col-lg-6 p-2 mx-auto">
+        <p class="lead mb-4">{{ tarefa.comentario }}</p>
+        <h3>Prioridade:</h3>
+        {% if tarefa.prioridade == 1: %}
+            <h3>
+                <span class="badge text-bg-danger rounded-pill">Urgente</span>
+            </h3>
+        {% elif tarefa.prioridade == 2: %}
+            <h3>
+                <span class="badge text-bg-warning rounded-pill">Normal</span>
+            </h3>
+        {% elif tarefa.prioridade == 3: %}
+            <h3>
+                <span class="badge text-bg-success rounded-pill">Baixa</span>
+            </h3>
+        {% endif %}
+        <h3>Data</h3>
+        <h3>{{ tarefa.data }}</h3>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a href="{{ url_for('edit_tarefa', tarefa_id=tarefa.id) }}" class="btn btn-primary " tabindex="-1" role="button" >Editar Tarefa</a>
+            <a href="{{ url_for('delete_tarefa', tarefa_id=tarefa.id) }}" class="btn btn-secondary" tabindex="-1" role="button">Deletar Tarefa</a>
+        </div>
+        <hr class="my-4"/>
+    </div>
+    {% endfor %}
+</div>
+</body>
+
