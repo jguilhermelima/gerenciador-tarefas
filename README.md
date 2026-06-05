@@ -53,3 +53,8 @@ A aplicação utiliza **Flask** no backend, **Flask SQLAlchemy** para gerenciame
 5. **Acesse no navegador**  
     ```bash
     http://localhost:5000
+
+👨‍💻 Autor
+José Guilherme
+
+* GitHub: @jguilhermelima
