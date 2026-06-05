@@ -21,10 +21,10 @@ A aplicação utiliza **Flask** no backend, **Flask SQLAlchemy** para gerenciame
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **Python** – Linguagem principal (51.6% do código)
+- **Python** – Linguagem principal
 - **Flask** – Framework web para criação da API e rotas
 - **Flask SQLAlchemy** – ORM para interação com o banco de dados
-- **HTML** – Estrutura da interface do usuário (48.4% do código)
+- **HTML** – Estrutura da interface do usuário
 - **SQLite** – Banco de dados padrão (configurável)
 
 ## 🚀 Como Executar o Projeto
